@@ -1,0 +1,41 @@
+1 - Welcome page
+    1.1 - Login option
+        1.1.1 - Implement user model and create on submit
+        1.1.2 - Email and password validation
+    1.2 - Welcome message
+    1.3 - Navbar
+        1.3.1 - Login/out
+        1.3.2 - About
+        1.3.3 - Transfer
+        1.3.4 - Bookmarks/Favorites (if logged in)
+        1.3.5 - Transaction History (if logged in)
+    1.4 - Link metamask prompt
+    If logged in
+    1.3 - Recent transactions
+    1.4 - Favorite swaps
+2 - Link metamask
+    2.1 - Login and connect wallet with site
+    2.2 - Retreive user credentials
+3 - About page
+    3.1 - Explain app
+    3.2 - Link our info/websites
+4 - Transfer page
+    4.1 - Transfer tool
+        4.1.1 - Send crypto from one wallet to the next
+        4.1.2 - Total fees
+        4.1.3 - Optional fees breakdown dropdown
+    4.2 - Recent transactions
+        4.2.1 - Cards of most recent transactions
+5 - Bookmarks page
+    5.1 - Display favorite cryptos
+        5.1.1 - Link crypto API and retreive live data
+        5.1.2 - Create tabs for search cryptos and view favorites
+            5.1.2.1 - View favorites
+                5.1.2.1.1 - View favorite cryptos as a small card with price and detail info
+                5.1.2.1.2 - Remove favorite
+            5.1.2.2 - Search cryptos
+                5.1.2.2.1 - Search for new cryptos and display same as favorites
+                5.1.2.2.1 - Add bookmark toggle to add cryptos to favorites
+    5.2 - Display favorite swaps
+6 - Transaction history page
+    6.1 - More descript breakdown of all wallet transactions
