@@ -42,7 +42,7 @@ app.use(function (err, req, res, next) {
 
 // Initialize DB
 mongoose.connect(
-	'mongodb://localhost:27017/puny-swap',
+	process.env.mongoDBURL,
 	{
 		useNewURLParser: true,
 		useUnifiedTopology: true,
