@@ -26,6 +26,14 @@ const userSchema = mongoose.Schema(
 			required: true,
 			minlength: [6, 'Your password should be atleast 6 characters'],
 		},
+		swapBookmark: [{
+			type: mongoose.Schema.Types.ObjectId,
+			ref: 'Swap'
+		}],
+		cryptoBookmark: [{
+			type: mongoose.Schema.Types.ObjectId,
+			ref: 'Bookmark'
+		}],
 	},
 	{
 		timestamps: true,
