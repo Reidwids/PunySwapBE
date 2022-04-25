@@ -8,6 +8,6 @@ router.use(express.urlencoded({ extended: true }));
 /* GET home page. */
 router.get('/', ctrl.index_get);
 router.get('/allCoins', ctrl.allCoins_get);
-router.get('/coinData', ctrl.coinData_get);
+router.post('/coinData', ctrl.coinData_get);
 
 module.exports = router;
