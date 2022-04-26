@@ -7,9 +7,7 @@ const { validationResult } = require('express-validator');
 
 exports.auth_signup_post = (req, res) => {
 	let user = new User(req.body);
-	console.log(req.body);
 	let hash = bcrypt.hashSync(req.body.password, salt);
-	console.log(hash);
 	user.password = hash;
 	user
 		.save()
@@ -34,7 +32,6 @@ exports.auth_signin_post = async (req, res) => {
 	let { emailAddress, password } = req.body;
 	try {
 		let user = await User.findOne({ emailAddress });
-		// console.log(user);
 
 		if (!user) {
 			return res.json({ message: 'User not found!' }).status(400);

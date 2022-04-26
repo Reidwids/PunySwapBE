@@ -10,6 +10,8 @@ router.get('/', ctrl.index_get);
 router.get('/allCoins', ctrl.allCoins_get);
 router.post('/coinData', ctrl.coinData_get);
 router.post('/addBookmark', ctrl.addBookmark_post);
+router.post('/removeBookmark', ctrl.removeBookmark_post);
 router.post('/addSwap', ctrl.addSwap_post);
+router.post('/removeSwap', ctrl.removeSwap_post);
 
 module.exports = router;
