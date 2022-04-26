@@ -1,17 +1,18 @@
-const mongoose = require("mongoose");
-
+const mongoose = require('mongoose');
 
 const bookmarkSchema = mongoose.Schema({
-    crypto: {
-        type: String,
-        required: true,
-    },
-    owner: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'User'
-    }],
+	crypto: {
+		type: String,
+		required: true,
+	},
+	owner: [
+		{
+			type: mongoose.Schema.Types.ObjectId,
+			ref: 'User',
+		},
+	],
 });
 
-const Bookmark = mongoose.model("Bookmark", bookmarkSchema);
+const Bookmark = mongoose.model('Bookmark', bookmarkSchema);
 
 module.exports = Bookmark;
