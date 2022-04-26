@@ -1,4 +1,6 @@
 const axios = require("axios")
+const Bookmark = require('../models/Bookmark')
+const Swap = require('../models/Swap')
 
 exports.index_get = (req, res, next) => {
 	res.render('index', { title: 'Express' });
@@ -36,4 +38,17 @@ exports.coinData_get = (req, res, next) =>{
 		console.log(err)
 		return res.json({"error": err})
 	});
+}
+
+exports.addSwap_post = (req, res, next) =>{
+	let {crypto1 , crypto2, owner} = req.body
+	
+}
+
+exports.addBookmark_post = (req, res, next) =>{
+	let {crypto, owner} = req.body
+	Bookmark.findOne({crypto: crypto}, (error, bookmark)=>{
+		console.log(error),
+		console.log(bookmark)
+	})
 }

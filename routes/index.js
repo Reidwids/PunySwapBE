@@ -9,5 +9,7 @@ router.use(express.urlencoded({ extended: true }));
 router.get('/', ctrl.index_get);
 router.get('/allCoins', ctrl.allCoins_get);
 router.post('/coinData', ctrl.coinData_get);
+router.post('/addBookmark', ctrl.addBookmark_post);
+router.post('/addSwap', ctrl.addSwap_post);
 
 module.exports = router;
