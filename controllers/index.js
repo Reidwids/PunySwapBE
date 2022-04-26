@@ -52,7 +52,7 @@ exports.addSwap_post = (req, res, next) =>{
 			newSwap.save()
 		}
 		if(!error){
-			User.findByIdAndUpdate(owner, {swapBookmark: swap?swap:newSwap}, (user)=>{
+			User.findByIdAndUpdate(owner, {$push: {swapBookmark: swap?swap:newSwap}}, (user)=>{
 				return res.json({"message": "Added Swap"})
 			})
 		}
@@ -94,7 +94,7 @@ exports.addBookmark_post = (req, res, next) =>{
 			newBookmark.save()
 		}
 		if(!error){
-			User.findByIdAndUpdate(owner, {cryptoBookmark: bookmark?bookmark:newBookmark}, (user)=>{
+			User.findByIdAndUpdate(owner, {$push: {cryptoBookmark: bookmark?bookmark:newBookmark}}, (user)=>{
 				return res.json({"message": "Added Bookmark"})
 			})
 		}
