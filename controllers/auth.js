@@ -31,7 +31,7 @@ exports.auth_signup_post = (req, res) => {
 exports.auth_signin_post = async (req, res) => {
 	let { emailAddress, password } = req.body;
 	try {
-		let user = await User.findOne({ emailAddress });
+		let user = await User.findOne({ emailAddress }).populate(["swapBookmark", "cryptoBookmark"])
 
 		if (!user) {
 			return res.json({ message: 'User not found!' }).status(400);
@@ -44,6 +44,8 @@ exports.auth_signin_post = async (req, res) => {
 			user: {
 				id: user._id,
 				name: user.firstName,
+				swapBookmark: user.swapBookmark,
+				cryptoBookmark: user.cryptoBookmark
 			},
 		};
 		jwt.sign(

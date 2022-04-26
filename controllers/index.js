@@ -82,6 +82,7 @@ exports.removeSwap_post = (req, res, next) =>{
 
 exports.addBookmark_post = (req, res, next) =>{
 	let {crypto, owner} = req.body
+	console.log(crypto, owner)
 	Bookmark.findOne({crypto: crypto}, (error, bookmark)=>{
 		let newBookmark = null
 		if(bookmark){
