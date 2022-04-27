@@ -13,6 +13,7 @@ router.post('/addBookmark', ctrl.addBookmark_post);
 router.post('/removeBookmark', ctrl.removeBookmark_post);
 router.post('/addSwap', ctrl.addSwap_post);
 router.post('/removeSwap', ctrl.removeSwap_post);
-router.post('/isBookmarked', ctrl.isBookMarked_post)
+router.post('/isBookmarked', ctrl.isBookMarked_post);
+router.post('/swapIsBookmarked', ctrl.swapIsBookMarked_post);
 
 module.exports = router;
