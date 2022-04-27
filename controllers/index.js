@@ -1,7 +1,9 @@
-const axios = require("axios")
+const axios = require("axios");
+const { $where } = require("../models/Bookmark");
 const Bookmark = require('../models/Bookmark')
 const Swap = require('../models/Swap')
-const User = require('../models/User')
+const User = require('../models/User');
+const { use } = require("../routes");
 
 exports.index_get = (req, res, next) => {
 	res.render('index', { title: 'Express' });
@@ -118,4 +120,14 @@ exports.removeBookmark_post = (req, res, next) =>{
 		}).populate("cryptoBookmark")
 	}).populate("owner")
 
+}
+
+
+exports.isBookMarked_post = (req, res, next) =>{
+	let {crypto, user} = req.body
+	Bookmark.findOne({crypto: crypto}, (err,bookmark)=>{
+		User.findOne({_id: user, cryptoBookmark: {$in: [bookmark]}}, (err, user)=>{
+			return user?res.json(true):res.json(false)
+		})
+	})
 }
