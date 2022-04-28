@@ -64,27 +64,19 @@ exports.addSwap_post = (req, res, next) => {
 
 exports.removeSwap_post = (req, res, next) => {
 	let { crypto1, crypto2, owner } = req.body;
-	Swap.findOneAndUpdate(
-		{ crypto1: crypto1, crypto2: crypto2 },
-		{
-			$pullAll: {
-				owner: [{ _id: owner }],
-			},
-		},
-		(err, swap) => {
-			User.findByIdAndUpdate(
-				owner,
-				{
-					$pullAll: {
-						swapBookmark: [{ _id: swap._id }],
-					},
-				},
-				(err, user) => {
-					res.json({ message: 'Removed Swap' });
-				}
-			).populate('swapBookmark');
-		}
-	).populate('owner');
+	Swap.findOne({ crypto1, crypto2 })
+		.then((swap) => {
+			Swap.findByIdAndDelete(swap._id)
+				.then((response) => {
+					res.json('Swap Deleted');
+				})
+				.catch((error) => {
+					console.log(error);
+				});
+		})
+		.catch((error) => {
+			console.log(error);
+		});
 };
 
 exports.addBookmark_post = (req, res, next) => {
