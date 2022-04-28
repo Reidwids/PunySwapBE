@@ -150,3 +150,12 @@ exports.swapIsBookMarked_post = (req, res, next) => {
 		});
 	});
 };
+
+exports.usersSwaps_get = (req, res, next) => {
+	let { user } = req.body;
+	User.findOne({ _id: user })
+		.populate('swapBookmark')
+		.then((user) => {
+			res.json(user.swapBookmark);
+		});
+};
