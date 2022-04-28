@@ -5,7 +5,15 @@ const swapSchema = mongoose.Schema({
 		type: String,
 		required: true,
 	},
+	crypto1Img: {
+		type: String,
+		required: true,
+	},
 	crypto2: {
+		type: String,
+		required: true,
+	},
+	crypto2Img: {
 		type: String,
 		required: true,
 	},
