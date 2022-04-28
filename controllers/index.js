@@ -151,8 +151,7 @@ exports.swapIsBookMarked_post = (req, res, next) => {
 };
 
 exports.usersSwaps_get = (req, res, next) => {
-	let { user } = req.body;
-	User.findOne({ _id: user })
+	User.findOne({ _id: req.query.userId })
 		.populate('swapBookmark')
 		.then((user) => {
 			return res.json(user.swapBookmark);
