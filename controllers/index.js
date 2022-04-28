@@ -156,6 +156,6 @@ exports.usersSwaps_get = (req, res, next) => {
 	User.findOne({ _id: user })
 		.populate('swapBookmark')
 		.then((user) => {
-			res.json(user.swapBookmark);
+			return res.json(user.swapBookmark);
 		});
 };

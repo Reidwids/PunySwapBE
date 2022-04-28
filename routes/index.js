@@ -15,6 +15,6 @@ router.post('/addSwap', ctrl.addSwap_post);
 router.post('/removeSwap', ctrl.removeSwap_post);
 router.post('/isBookmarked', ctrl.isBookMarked_post);
 router.post('/swapIsBookmarked', ctrl.swapIsBookMarked_post);
-router.post('/userSwaps', ctrl.usersSwaps_get);
+router.get('/userSwaps', ctrl.usersSwaps_get);
 
 module.exports = router;
