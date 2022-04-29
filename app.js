@@ -4,13 +4,14 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const mongoose = require('mongoose');
-const favicon = require('serve-favicon')
+const favicon = require('serve-favicon');
+require('dotenv').config();
 
 var indexRouter = require('./routes/index');
 var authRouter = require('./routes/auth');
 
 var app = express();
-const port = 4000;
+const port = process.env.PORT;
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
