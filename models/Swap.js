@@ -17,6 +17,10 @@ const swapSchema = mongoose.Schema({
 		type: String,
 		required: true,
 	},
+	chain: {
+		type: String,
+		required: true,
+	},
 	owner: [
 		{
 			type: mongoose.Schema.Types.ObjectId,
