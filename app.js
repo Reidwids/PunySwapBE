@@ -9,7 +9,6 @@ require('dotenv').config();
 
 var indexRouter = require('./routes/index');
 var authRouter = require('./routes/auth');
-
 var app = express();
 const port = process.env.PORT;
 
