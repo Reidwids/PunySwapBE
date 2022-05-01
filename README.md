@@ -30,8 +30,7 @@ This project uses the full MERN stack, HTML, CSS, JavaScript, Bootstrap5, Solidi
 
 To check out the app, <a href="https://puny-swap-final.herokuapp.com" target="_blank">click here!</a>
 
-Or watch the tutorial video below for a full walk-through:
-[![PunySwapTutorial](https://img.youtube.com/vi/v=RB6zO-eQN9c/0.jpg)](https://www.youtube.com/watch?v=RB6zO-eQN9c)
+Or watch the tutorial video <a href="https://www.youtube.com/watch?v=RB6zO-eQN9c" target="_blank">here</a> for a full walk-through:
 
 
 ## Next Steps
