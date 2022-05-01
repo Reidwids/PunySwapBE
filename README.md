@@ -30,6 +30,9 @@ This project uses the full MERN stack, HTML, CSS, JavaScript, Bootstrap5, Solidi
 
 To check out the app, <a href="https://puny-swap-final.herokuapp.com" target="_blank">click here!</a>
 
+Or watch the tutorial video below for a full walk-through:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RB6zO-eQN9c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Next Steps
 
 - Create more detailed graphs
